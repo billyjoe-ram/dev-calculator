@@ -1,17 +1,36 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Tab 1
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  
+  <div id="container">    
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+    <div class="base">
+      <ion-label>Digite um valor: </ion-label>
+      <ion-input [(ngModel)]=numero></ion-input>
+
+      <ion-item>
+        <ion-label>Base</ion-label>
+        <ion-select value="bin" [(ngModel)]=base okText="OK" cancelText="Cancelar" id="base">
+          <ion-select-option value="bin">Binário</ion-select-option>
+          <ion-select-option value="dec">Decimal</ion-select-option>
+          <ion-select-option value="oct">Octal</ion-select-option>
+          <ion-select-option value="hex">Hexadecimal</ion-select-option>
+        </ion-select>
+      </ion-item>      
+            
+    </div>
+
+    <div class="conversao">
+      <ion-item>
+        <ion-label>Converter para</ion-label>
+        <ion-select value="bin" [(ngModel)]=n_base okText="OK" cancelText="Cancelar" id="n_base">
+          <ion-select-option  value="bin">Binário</ion-select-option>
+          <ion-select-option value="dec">Decimal</ion-select-option>
+          <ion-select-option value="oct">Octal</ion-select-option>
+          <ion-select-option value="hex">Hexadecimal</ion-select-option>
+        </ion-select>
+      </ion-item>
+    </div>
+
+    <ion-button (click)="converter()">Converter</ion-button>
+  </div>
+
 </ion-content>
