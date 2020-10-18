@@ -24,3 +24,53 @@
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+
+// My ionic styles
+ion-toolbar {
+    --background: green;
+    color: white;
+}
+
+ion-title {
+    text-align: center;
+}
+
+ion-label {
+    font-weight: bold;
+}
+
+ion-input.sc-ion-input-md-h {
+    --background: white;
+    border-radius: 6px;
+    margin: 10px 0 10px 0;
+    border: 2px solid green;
+}
+
+ion-button {
+    --background: green;
+    color: white;
+    font-weight: 600;
+}
+
+ion-item {    
+    width: 90vw;    
+    border-radius: 6px;
+    margin-bottom: 10px;
+    border: 2px solid green;
+}
+
+ion-content.md.hydrated {
+    --background: #eeeeee;
+}
+
+ion-tab-bar.md.hydrated {
+    --background: green;
+}
+
+ion-tab-button {
+    color: white;
+}
+
+ion-tab-button.tab-selected {
+    color: black;
+}

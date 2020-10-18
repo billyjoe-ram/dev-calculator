@@ -1,11 +1,20 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Calculadora do Programador
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
 <ion-content [fullscreen]="true">
   
-  <div id="container">    
-
-    <div class="base">
+  <div id="container">        
+    <div class="input-value">
       <ion-label>Digite um valor: </ion-label>
       <ion-input [(ngModel)]=numero></ion-input>
+    </div>
 
+    <div class="base">      
       <ion-item>
         <ion-label>Base</ion-label>
         <ion-select value="bin" [(ngModel)]=base okText="OK" cancelText="Cancelar" id="base">
@@ -14,8 +23,7 @@
           <ion-select-option value="oct">Octal</ion-select-option>
           <ion-select-option value="hex">Hexadecimal</ion-select-option>
         </ion-select>
-      </ion-item>      
-            
+      </ion-item>                  
     </div>
 
     <div class="conversao">
