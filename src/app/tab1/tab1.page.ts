@@ -15,6 +15,11 @@ export class Tab1Page {
   vl_base: number;
   vl_n_base: number;      
   async resultado() {
+    // Variáveis para o input e conversão
+    let numeroValor: string = this.numero;
+    let numeroNovo: any;
+    
+    // Obter a base para conversão
     switch (this.n_base) {
       case 'bin':    
         this.vl_n_base = 2;    
@@ -30,15 +35,15 @@ export class Tab1Page {
         break;
       default:
         console.error(this.base);
-    }
-    let numeroValor: any = Number(this.numero);
-    let numeroNovo: any;
+    }    
+    
+    // Obter a base original para realizar o cálculo
     switch (this.base) {
       case 'bin':
         this.vl_base = 2;                
         break;
-      case 'dec': 
-        this.vl_base = 10;        
+      case 'dec':        
+        this.vl_base = 10;
         break;
       case 'oct': 
         this.vl_base = 8;        
@@ -48,13 +53,18 @@ export class Tab1Page {
         break;
       default:
         console.error(this.base);
+        break;
     }
-    numeroNovo = Number.parseInt(numeroValor, this.vl_n_base);
+
+    // Realizar a conversão
+    numeroNovo = parseInt(numeroValor, this.vl_base).toString(this.vl_n_base);    
     console.log(numeroNovo);
+
+    // Exibir o valor em um alert
     const alert = await this.alertController.create({
       cssClass: 'resultado',
       header: 'Resultado',      
-      message: `${numeroNovo}`,
+      message: `${numeroValor} na base ${this.vl_n_base} é ${numeroNovo}`,
       buttons: ['Muito Obrigado!']
     });
 
