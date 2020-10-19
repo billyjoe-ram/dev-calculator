@@ -1,17 +1,37 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Tab 2
+      Calculadora de Cores
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 2</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <div id="container">   
 
-  <app-explore-container name="Tab 2 page"></app-explore-container>
+    <div class="cores">
+      <!-- Get RED value -->     
+      <div class="input-value red">
+        <ion-label>R: </ion-label>
+        <ion-input [(ngModel)]=red></ion-input>
+      </div>
+
+      <!-- Get GREEN value -->     
+      <div class="input-value green">
+        <ion-label>G: </ion-label>
+        <ion-input [(ngModel)]=green></ion-input>
+      </div>
+
+      <!-- Get BLUE value -->     
+      <div class="input-value blue">
+        <ion-label>B: </ion-label>
+        <ion-input [(ngModel)]=blue></ion-input>
+      </div>
+    </div>        
+
+    <div class="button-color">
+      <ion-button (click)="cor()">COR</ion-button>    
+    </div>    
+    
+  </div>
 </ion-content>
