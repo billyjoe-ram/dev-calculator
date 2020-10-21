@@ -9,41 +9,43 @@ import { AlertController } from '@ionic/angular';
 export class Tab2Page {
 
   constructor(public alertController: AlertController) {}
+  base: string;
   red: string;
   green: string;
-  blue: string;  
+  blue: string;
+  tamanho: number; 
+  
   async cor() {    
     // Variáveis para o input e exibição
     let pRed = this.red;
     let pGreen = this.green;
     let pBlue = this.blue;
-    let cor = pRed + pGreen + pBlue;
-    let corNome;
+    let cor;
+    let corAlert;
     
     // Cores padrão
-    switch (cor) {
-      case 'ff0000':    
-        corNome = 'vermelho';
+    switch (this.base) {
+      case 'hex':    
+        cor = `#${pRed}${pGreen}${pBlue}`;
+        corAlert = cor;
         break;
-      case '00ff00': 
-        corNome = 'verde';
-        break;
-      case '0000ff': 
-        corNome = 'azul';
-        break;      
+      case 'rgb': 
+        cor = `(${pRed}, ${pGreen}, ${pBlue})`;
+        corAlert = `rgb${cor}`;
+        break; 
       default:
-        console.error(cor);
-        break;
-    }        
+        console.log(cor);
+        break;     
+    }      
 
     // Exibir a cor em um alert
     const alert = await this.alertController.create({
       cssClass: 'cor-alert',
       header: 'Resultado',      
-      message: `A cor selecionada foi ${corNome}`,
+      message: `A cor selecionada foi <span style="color: ${corAlert};"> ${cor} </span>`,
       buttons: ['Muito Obrigado!']
-    });
-    console.log(cor);
+    });    
+    console.log(corAlert);
     await alert.present();
   }
 

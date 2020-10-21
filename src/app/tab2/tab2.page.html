@@ -9,6 +9,16 @@
 <ion-content [fullscreen]="true">
   <div id="container">   
 
+    <div class="base">      
+      <ion-item>        
+        <ion-label>Selecione a base</ion-label>
+        <ion-select value="hex" [(ngModel)]=base okText="OK" cancelText="Cancelar" id="base">                    
+          <ion-select-option value="hex">Hexadecimal</ion-select-option>
+          <ion-select-option value="rgb">RGB</ion-select-option>
+        </ion-select>
+      </ion-item>                  
+    </div>
+
     <div class="cores">
       <!-- Get RED value -->     
       <div class="input-value red">
@@ -30,7 +40,7 @@
     </div>        
 
     <div class="button-color">
-      <ion-button (click)="cor()">COR</ion-button>    
+      <ion-button (click)="cor()">Calcular</ion-button>    
     </div>    
     
   </div>
