@@ -22,6 +22,7 @@ export class Tab2Page {
     let pBlue = this.blue;
     let cor;
     let corAlert;
+    const meuAlert = document.getElementsByTagName("ion-alert");
     
     // Cores padrão
     switch (this.base) {
@@ -42,10 +43,15 @@ export class Tab2Page {
     const alert = await this.alertController.create({
       cssClass: 'cor-alert',
       header: 'Resultado',      
-      message: `A cor selecionada foi <span style="color: ${corAlert};"> ${cor} </span>`,
+      message: `A cor selecionada foi ${cor} </span>`,
       buttons: ['Muito Obrigado!']
     });    
-    console.log(corAlert);
+    
+    for (var i = 0; i < meuAlert.length; i++) {
+      meuAlert[i].style.backgroundColor=`${corAlert}`;
+    }
+
+    console.log(corAlert);    
     await alert.present();
   }
 
