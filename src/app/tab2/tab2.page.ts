@@ -4,7 +4,7 @@ import { AlertController } from '@ionic/angular';
 @Component({
   selector: 'app-tab2',
   templateUrl: 'tab2.page.html',
-  styleUrls: ['tab2.page.scss']
+  styleUrls: ['tab2.page.scss', '../app.component.scss']
 })
 export class Tab2Page {
 
