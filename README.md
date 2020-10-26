@@ -15,8 +15,11 @@ In adition, the second tab of the application offers a page that helps you to vi
 - [ ] Limit characters to only those from the specific base (base 2, 8, 10, 16 and RGB code)
 - [ ] More confortable design (including animations to make things smooth)
 
- **Numeric Bases Screen**<br>
+ **Numeric Bases Tab**<br>
  ![](./src/assets/SCBases1.PNG)
  
- **Color Visualizer Screen**<br>
+ **Color Visualizer Tab**<br>
  ![](./src/assets/SCColor1.PNG)
+ 
+ ___Observation:___
+ Most elements and comments are in portuguese to reach the brazilian/portuguese dev. community more easily.
