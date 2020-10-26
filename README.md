@@ -16,7 +16,7 @@ In adition, the second tab of the application offers a page that helps you to vi
 - [ ] More confortable design (including animations to make things smooth)
 
  **Numeric Bases Screen**
- ![/src/assets/SCBases1.png]
+ <img src="./src/assets/SCBases1.png">
  
  **Color Visualizer Screen**
- ![(/src/assets/SCColor1.png]
+ <img src="./src/assets/SCColor1.png">
