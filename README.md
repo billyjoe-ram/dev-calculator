@@ -1,11 +1,8 @@
-# dev-calculator
-A simple numeric base converter for developers and RGB/Hexa color showing using TypeScript and Ionic.
-
 # Numeric Base Converter
 
 This application provides a fast way to change values from a numeric base to another.
 
-** Numeric Bases Avaiable **
+**Numeric Bases Available**
 - Binary
 - Decimal
 - Octal
@@ -13,13 +10,13 @@ This application provides a fast way to change values from a numeric base to ano
 
 In adition, the second tab of the application offers a page that helps you to visualize and pick a color, after typing in the inputs field
 
-** Future implementations: **
+**Future implementations:**
 - [] Change only the background color of the alert
 - [] Limit characters to only those from the specific base (base 2, 8, 10, 16 and RGB code)
 - [] More confortable design (including animations to make things smooth)
 
- ** Numeric Bases Screen **
- ![](src/assets/SCBases1.png)
+ **Numeric Bases Screen**
+ ![](./src/assets/SCBases1.png)
  
- ** Color Visualizer Screen **
- ![](src/assetsSCColor1.png)
+ **Color Visualizer Screen**
+ ![](./src/assetsSCColor1.png)
