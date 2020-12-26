@@ -13,7 +13,7 @@ export class Tab2Page {
   red: string;
   green: string;
   blue: string;
-  tamanho: number;
+  tamanho: number; 
   
   async cor() {    
     // Variáveis para o input e exibição
@@ -48,7 +48,7 @@ export class Tab2Page {
     });    
     
     for (var i = 0; i < meuAlert.length; i++) {
-      alert[i].style.backgroundColor=`${corAlert}`;
+      meuAlert[i].style.backgroundColor=`${corAlert}`;
     }
 
     console.log(corAlert);    
