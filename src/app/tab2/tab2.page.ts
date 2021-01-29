@@ -22,7 +22,7 @@ export class Tab2Page {
     let pBlue = this.blue;
     let cor;
     let corAlert;
-    const meuAlert = document.getElementsByTagName("ion-alert");
+    const meuAlert = document.querySelector(".cor-alert.alert-wrapper");
     
     // Cores padrão
     switch (this.base) {
@@ -45,14 +45,13 @@ export class Tab2Page {
       header: 'Resultado',      
       message: `A cor selecionada foi ${cor} </span>`,
       buttons: ['Muito Obrigado!']
-    });    
-    
-    for (var i = 0; i < meuAlert.length; i++) {
-      meuAlert[i].style.backgroundColor=`${corAlert}`;
-    }
+    });        
 
     console.log(corAlert);    
     await alert.present();
+    await alert.setAttribute("style", `--background: ${corAlert}`)
+    
+    // await meuAlert.setAttribute("style", `background-color: ${corAlert}`);
   }
 
 }
